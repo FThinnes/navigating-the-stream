@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaProducer", "KafkaProducer\KafkaProducer.csproj", "{9777A996-3A5C-4694-92CC-13D68A2AF38D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaCommon", "KafkaCommon\KafkaCommon.csproj", "{7B0492CB-DBB3-402D-873D-245D78A7CDF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{01644720-0824-4477-AB2E-1C81A2E9BF4C}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaConsumer", "KafkaConsumer\KafkaConsumer.csproj", "{B8F642BD-E2F8-434B-B0CC-A0820FD5C517}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaSchemaProducer", "KafkaSchemaProducer\KafkaSchemaProducer.csproj", "{74DD4DF1-6383-44EE-B26A-7A2359AEF67B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaSchemaConsumer", "KafkaSchemaConsumer\KafkaSchemaConsumer.csproj", "{E41CD432-8FCD-4458-BB8E-DDC87964120E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9777A996-3A5C-4694-92CC-13D68A2AF38D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9777A996-3A5C-4694-92CC-13D68A2AF38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9777A996-3A5C-4694-92CC-13D68A2AF38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9777A996-3A5C-4694-92CC-13D68A2AF38D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B0492CB-DBB3-402D-873D-245D78A7CDF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B0492CB-DBB3-402D-873D-245D78A7CDF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B0492CB-DBB3-402D-873D-245D78A7CDF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B0492CB-DBB3-402D-873D-245D78A7CDF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F642BD-E2F8-434B-B0CC-A0820FD5C517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F642BD-E2F8-434B-B0CC-A0820FD5C517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F642BD-E2F8-434B-B0CC-A0820FD5C517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F642BD-E2F8-434B-B0CC-A0820FD5C517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74DD4DF1-6383-44EE-B26A-7A2359AEF67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DD4DF1-6383-44EE-B26A-7A2359AEF67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DD4DF1-6383-44EE-B26A-7A2359AEF67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74DD4DF1-6383-44EE-B26A-7A2359AEF67B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41CD432-8FCD-4458-BB8E-DDC87964120E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41CD432-8FCD-4458-BB8E-DDC87964120E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41CD432-8FCD-4458-BB8E-DDC87964120E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41CD432-8FCD-4458-BB8E-DDC87964120E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
