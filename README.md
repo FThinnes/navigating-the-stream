@@ -1,20 +1,40 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Navigating the Stream - Getting started with Kafka in .NET
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Introduction
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Kafka is the de-facto standard when it comes to building real-time data pipelines. 
+It is a distributed, horizontally scalable, fault-tolerant, commit log. 
+It is designed to allow a single cluster to serve as the central data backbone 
+for a large organization. It can be elastically and transparently expanded without downtime. 
+Data streams are partitioned and spread over a cluster of machines to allow data 
+streams larger than the capability of any single machine and to allow clusters of 
+co-ordinated consumers.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Run a local Kafka environment
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+In this repository there's a docker-compose file that will enable you to start a local
+kafka environment with a single command. The environment consists of:
+- A single kafka broker, running [bitnami-kafka](https://hub.docker.com/r/bitnami/kafka) accessible on `localhost:9094` using the credentials "kafka:mysecretpassword"
+- [Kafka-UI](https://github.com/provectus/kafka-ui) for monitoring the kafka topics, accessible on `http://localhost:8080/`
+- [Karapace Schema Registry](https://github.com/Aiven-Open/karapace), accessible on `http://localhost:8081/`
+
+If you've got docker up and running locally, then all you need to do is run the following command:
+```bash
+docker compose up
+``` 
+
+## Kafka in .NET
+
+There are a few libraries available for working with Kafka in .NET. For this demonstration we will 
+be using [Chr.Avro.Confluent](https://www.nuget.org/packages/Chr.Avro.Confluent/) which is a .NET library 
+simplifying access to Kafka, especially when serializing and deserializing Apache Avro payloads. 
+It is built on top of the Confluent.Kafka library but in our experience much more performant and easier to use.
+
+## The examples
+
+In this repository you will four very basic examples to get you started with Kafka in .NET.
+
+1. **KafkaProducer**: A simple producer that sends a string-message to a Kafka topic.
+2. **KafkaConsumer**: A simple consumer that reads string-messages from a Kafka topic.
+3. **KafkaSchemaProducer**: A simple producer that sends a message to a Kafka topic using Avro serialization.
+4. **KafkaSchemaConsumer**: A simple consumer that reads messages from a Kafka topic using Avro deserialization.
