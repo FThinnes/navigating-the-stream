@@ -24,7 +24,7 @@ var consumer = new ConsumerBuilder<long, SensorEvent>(config)
 consumer.Assign(new TopicPartitionOffset("sensorValues", 0, Offset.Beginning));
 while (true)
 {
-    var result = consumer.Consume(10000);
+    var result = consumer.Consume(); // will block until a message is available
     if (result == null)
     {
         Thread.Sleep(1000);

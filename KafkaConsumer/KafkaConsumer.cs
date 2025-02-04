@@ -15,7 +15,7 @@ consumer.Assign(new TopicPartitionOffset("demo",
     0, Offset.Beginning));
 while (true)
 {
-    var r = consumer.Consume(10000);
+    var r = consumer.Consume(); // will block until a message is available
     if (r == null)
     {
         Thread.Sleep(1000);
