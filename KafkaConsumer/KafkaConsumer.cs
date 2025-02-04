@@ -8,19 +8,15 @@ var config = new ConsumerConfig
     SaslUsername = "kafka",
     SaslPassword = "mysecretpassword",
     GroupId = "mygroup",
+    EnableAutoCommit = false
 };
 
 var consumer = new ConsumerBuilder<string, string>(config).Build();
 consumer.Assign(new TopicPartitionOffset("demo", 
-    0, Offset.Beginning));
+    0, Offset.Stored));
 while (true)
 {
     var r = consumer.Consume(); // will block until a message is available
-    if (r == null)
-    {
-        Thread.Sleep(1000);
-        continue;
-    }
-    Console.WriteLine($"Consumed message '{r.Message.Value}'" +
-                      $" at: '{r.Topic}/{r.Partition}/{r.Offset}'.");
+
+    Console.WriteLine($"Consumed message with offset {r.Offset} - value {r.Message.Value}");
 }
