@@ -28,11 +28,12 @@ docker compose up
 There are a few libraries available for working with Kafka in .NET. For this demonstration we will 
 be using [Chr.Avro.Confluent](https://www.nuget.org/packages/Chr.Avro.Confluent/) which is a .NET library 
 simplifying access to Kafka, especially when serializing and deserializing Apache Avro payloads. 
-It is built on top of the Confluent.Kafka library but in our experience much more performant and easier to use.
+It is built on top of the Confluent.Kafka library but in our opinion it is easier to use and in some cases 
+it can deliver better performance when deserializing avro data.
 
 ## The examples
 
-In this repository you will four very basic examples to get you started with Kafka in .NET.
+In this repository you will find four very basic examples to get you started with Kafka in .NET.
 
 1. **KafkaProducer**: A simple producer that sends a string-message to a Kafka topic.
 2. **KafkaConsumer**: A simple consumer that reads string-messages from a Kafka topic.

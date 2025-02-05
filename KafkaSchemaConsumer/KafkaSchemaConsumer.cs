@@ -10,7 +10,8 @@ var config = new ConsumerConfig
     SecurityProtocol = SecurityProtocol.SaslPlaintext,
     SaslUsername = "kafka",
     SaslPassword = "mysecretpassword",
-    GroupId = "myconsumer"
+    GroupId = "myconsumer",
+    EnableAutoCommit = false
 };
 
 var registryConfig = new SchemaRegistryConfig
@@ -25,10 +26,5 @@ consumer.Assign(new TopicPartitionOffset("sensorValues", 0, Offset.Beginning));
 while (true)
 {
     var result = consumer.Consume(); // will block until a message is available
-    if (result == null)
-    {
-        Thread.Sleep(1000);
-        continue;
-    }
     Console.WriteLine($"New sensor value: {result.Message.Value.NewSensorValue} at: {result.Message.Value.Timestamp} for sensor {result.Message.Value.SensorId}");
 }
