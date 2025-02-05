@@ -58,11 +58,11 @@ services:
     expose:
       - 8081
 
-  kafka-ui:
+  kafbat-ui:
     depends_on:
       kafka:
         condition: service_healthy
-    image: provectuslabs/kafka-ui:latest
+    image: ghcr.io/kafbat/kafka-ui:latest
     container_name: kafka-ui
     networks:
       - kafka-and-dotnet
