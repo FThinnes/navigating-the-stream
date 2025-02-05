@@ -15,7 +15,7 @@ co-ordinated consumers.
 In this repository there's a docker-compose file that will enable you to start a local
 kafka environment with a single command. The environment consists of:
 - A single kafka broker, running [bitnami-kafka](https://hub.docker.com/r/bitnami/kafka) accessible on `localhost:9094` using the credentials "kafka:mysecretpassword"
-- [Kafka-UI](https://github.com/provectus/kafka-ui) for monitoring the kafka topics, accessible on `http://localhost:8080/`
+- [Kafka-UI](https://github.com/kafbat/kafka-ui) for monitoring the kafka topics, accessible on `http://localhost:8080/`
 - [Karapace Schema Registry](https://github.com/Aiven-Open/karapace), accessible on `http://localhost:8081/`
 
 If you've got docker up and running locally, then all you need to do is run the following command:
